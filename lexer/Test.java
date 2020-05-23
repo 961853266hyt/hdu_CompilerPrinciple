@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import LL1.PredictTable;
 import µİ¹éÏÂ½µ×Ó³ÌĞò.RecurDesc;
 public class Test {
 
@@ -15,10 +16,16 @@ public class Test {
 		}
 		l.printlist();
 		
-		RecurDesc r=new RecurDesc(l.tokenlist);
+		/* ²âÊÔµİ¹éÏÂ½µ
+		 * RecurDesc r=new RecurDesc(l.tokenlist);
 		r.E();
 		if(r.flag==0) System.out.print("match success!!!");
 		else System.out.print("match failed!!!");
+		*/  
+		
+		//²âÊÔLL£¨1£©Óï·¨·ÖÎö
+		PredictTable  p=new PredictTable();
+		p.analyze(l.tokenlist);
 	}
 
 }
