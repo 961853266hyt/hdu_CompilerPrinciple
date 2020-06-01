@@ -22,7 +22,7 @@ public class Lexer {
 	public int line=1;
 	private char temp;   //存放预先读入的下一个字符   
 	
-	ArrayList<Token> tokenlist=new ArrayList<Token>(11);    //Token类型动态数组
+	public ArrayList<Token> tokenlist=new ArrayList<Token>(11);    //Token类型动态数组
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	void addtoken(Token t) {
@@ -72,7 +72,7 @@ public class Lexer {
 		
 	}
 	
-	void printlist() {
+	public void printlist() {
 		Code c=new Code();
 		Token w;
 		for(int i=11;i<tokenlist.size();i++) {

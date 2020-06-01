@@ -16,16 +16,17 @@ public class Test {
 		}
 		l.printlist();
 		
-		/* ²âÊÔµİ¹éÏÂ½µ
-		 * RecurDesc r=new RecurDesc(l.tokenlist);
+		
+		/*RecurDesc r=new RecurDesc(l.tokenlist);
 		r.E();
 		if(r.flag==0) System.out.print("match success!!!");
 		else System.out.print("match failed!!!");
-		*/  
+	    */
 		
-		//²âÊÔLL£¨1£©Óï·¨·ÖÎö
+		
 		PredictTable  p=new PredictTable();
 		p.analyze(l.tokenlist);
+		
 	}
 
 }

@@ -166,7 +166,7 @@ public class PredictTable {
 		for(int i=s.size()-1;i>=0;i--) {
 			System.out.print(toString(s.get(i)));
 		}
-		System.out.print("    ");
+		System.out.print("     ");
 	}
 	
     int GetCode(String s) {
