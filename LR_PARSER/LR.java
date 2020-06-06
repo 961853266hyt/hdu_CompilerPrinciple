@@ -59,6 +59,9 @@ public class LR {   //LR语法分析器
  *       
  */
  
+	private Formatter f = new Formatter(System.out);
+	
+	
 	public int GetCode(Token t) {
 		if(t.code == lexer.Code.ID) return Code.GetCode("ID");
 		
@@ -71,18 +74,21 @@ public class LR {   //LR语法分析器
 	}
 	
 	public void PrintStack(Stack<Integer> s) {
-		
+		StringBuffer temp = new StringBuffer();
 		for(int i=0;i<=s.size()-1;i++) {
-			System.out.print(s.get(i));
+			/*System.out.print(s.get(i));*/
+			temp.append(s.get(i));
 		}
-		System.out.print("     ");
+		f.format("%-30s", temp);
 	}
 	
 	public void PrintCurrentToken(ArrayList<Token> t,int index) {
+		StringBuffer temp = new StringBuffer();
 		for(int i = 11;i<=index;i++) {
-			System.out.print(t.get(i).val);
+			/*System.out.print(t.get(i).val);*/
+			temp.append(t.get(i).val);
 		}
-		System.out.print("   ");
+		f.format("%-20s", temp);
 		
 	}
 	public void success() {
@@ -97,6 +103,7 @@ public class LR {   //LR语法分析器
 		state_stack.push(0);
 		tokenlist.add(new Token(Code.Dollar,"$"));
 		
+		f.format("%-58s%-27s%s\n","栈","已匹配输入","动作");
 		while(true){
 			top = state_stack.peek();
 			code = GetCode(t);

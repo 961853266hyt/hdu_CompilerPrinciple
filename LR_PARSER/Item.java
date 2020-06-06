@@ -1,7 +1,9 @@
 package LR_PARSER;
 /**
- * <产生式编号,点的位置>
+ * @param generator_num(产生式编号)     dot_position(点的位置)
  * 
+ * 
+ * @author胡逸藤
  */
 public class Item {
 	int generator_num;  //产生式编号
